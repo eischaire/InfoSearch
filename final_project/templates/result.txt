@@ -1,0 +1,62 @@
+<html>
+<style>
+	h1{
+		display: block;
+		color: red;
+		background-color: #F0F0FF;
+		border-radius: 5px;
+	}
+	
+	.left_info{
+		position: bottom
+		float: leftwards;
+		width: 20%;
+		top: 0;
+	}
+	
+	.main_div{
+		position: center;
+		float: right;
+		top: 0;
+		padding-left: 20px;
+		width: 80%;
+		height: 80%;
+	}
+	
+	div {
+		background-color: #F0F0FF;
+		border-radius: 10px;
+	}
+	
+	p {
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+</style>
+
+<head>
+	<meta charset="utf-8">
+	<title>Поиск по смешному датасету</title>
+</head>
+
+--{% include "header.html" %}
+
+<body background="tobg.jpg">
+	<div class="main_div">
+	<h3>Результаты поиска</h3>
+	{% for doc in output %}
+		<p> {{ doc }} </p>
+	{% endfor %}
+	</div>
+	<div class="left_info">
+	<p>Это поиск по смешному датасету.</p>
+	<p>Здесь вы не найдёте ничего полезного, кроме смешных запросов про Дональда Козыря.</p>
+	<p>Разработчик сайта и наполнения: Анна Охапкина</p>
+	</div>
+
+
+</body>
+</html>

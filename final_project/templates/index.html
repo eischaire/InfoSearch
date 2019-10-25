@@ -1,0 +1,78 @@
+<html>
+<style>
+	h1{
+		display: block;
+		color: #f06F6F;
+		background-color: #F0F0FF;
+		border-radius: 5px;
+		font: Candara;
+	}
+	
+	.left_info{
+		position: bottom
+		float: leftwards;
+		width: 20%;
+		top: 0;
+	}
+	
+	.main_div{
+		position: center;
+		float: right;
+		top: 0;
+		padding-left: 20px;
+		width: 80%;
+		height: 80%;
+	}
+	
+	div {
+		background-color: #F0F0FF;
+		border-radius: 10px;
+	}
+	
+	p {
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	
+		body {
+		background-image: url({{ url_for('static', filename='tobg.jpg') }});
+		font: Arial;
+	}
+
+</style>
+
+<head>
+	<meta charset="utf-8">
+	<title>Поиск по датасету Kaggle</title>
+</head>
+
+<body>
+
+	<h1 align="center">IRL IR is not easy!</h1>
+	<div class="main_div">
+	<h3>Как настроение?</h3>
+	<form>
+	<label><h4>Ваш запрос</h4>
+	<input name='query' type='text' value=''>
+	</label>
+	<br>
+	<br>
+	<label><h4>Модель для поиска</h4>
+	<input name='model' type='radio' value='tfidf'>TF-IDF<br>
+	<input name='model' type='radio' value='bm'>BM25<br>
+	<input name='model' type='radio' value='fasttext'>FastText<br>
+	</label>
+	<br>
+	<br>
+	<label><input type="submit" value="Go!" style="background-color: #25cc25"></label>
+	</form>
+	</div>
+	<div class="left_info">
+	<p>Это поиск по переведенному датасету других поисковых запросов.</p>
+	<p>Здесь вы можете найти, например, много смешных запросов про Дональда Козыря.</p>
+	</div>
+</body>
+
+</html>

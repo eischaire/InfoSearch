@@ -1,0 +1,65 @@
+<html>
+<style>
+	h1{
+		display: block;
+		color: red;
+		background-color: #F0F0FF;
+		border-radius: 5px;
+		font: Times;
+	}
+	
+	.left_info{
+		position: bottom
+		float: leftwards;
+		width: 20%;
+		top: 0;
+	}
+	
+	.main_div{
+		position: center;
+		float: right;
+		top: 0;
+		padding-left: 20px;
+		width: 80%;
+		height: 80%;
+	}
+	
+	div {
+		background-color: #F0F0FF;
+		border-radius: 10px;
+	}
+	
+	p {
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	
+	body {
+		background-image: url({{ url_for('static', filename='tobg.jpg') }});
+	}
+
+</style>
+
+<head>
+	<meta charset="utf-8">
+	<title>Результаты поиска</title>
+</head>
+
+<body>
+	<h1 align="center">IRL IR is not easy!</h1>
+	<div class="main_div">
+	<h3>Результаты поиска</h3>
+	{% for doc in output %}
+		<p> {{ doc }} </p>
+	{% endfor %}
+	</div>
+	<div class="left_info">
+	<p>Это поиск по переведенному датасету других поисковых запросов.</p>
+	<p>Здесь вы можете найти, например, много смешных запросов про Дональда Козыря.</p>
+	</div>
+
+
+</body>
+</html>
